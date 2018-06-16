@@ -1,0 +1,16 @@
+{
+  "name": "ariana-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev-server": "nodemon app.js"
+  },
+  "author": "Kaden Zipfel",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}

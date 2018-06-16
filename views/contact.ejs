@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<div class="container">
+  <div class="contact">
+    <h2>Contact</h2>
+    <form action="#" class="contact-form">
+      <div class="contact-form__group">
+        <input id="name" type="text" class="contact-form__input" placeholder="Name">
+        <label for="name" class="contact-form__label">Name</label>
+      </div>
+      <div class="contact-form__group">
+        <input id="email" type="email" class="contact-form__input" placeholder="Email">
+        <label for="email" class="contact-form__label">Email</label>
+      </div>
+      <div class="contact-form__group">
+        <textarea name="message" id="message" rows="5" class="contact-form__textarea" placeholder="Type your message here..."></textarea>
+        <label for="message" class="contact-form__label">Message</label>
+      </div>
+      <button class="contact__btn btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<% include partials/footer %>
