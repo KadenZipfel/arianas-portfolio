@@ -1,6 +1,6 @@
-const path = require('path');
 const express = require('express');
 const app = express();
+
 
 const PORT = process.env.PORT || 3000;
 
@@ -36,8 +36,8 @@ app.get('/family', (req, res) => {
 });
 
 // Headshots Page
-app.get('/headshots', (req, res) => {
-  res.render('headshots');
+app.get('/couples', (req, res) => {
+  res.render('couples');
 });
 
 // Creative Page
