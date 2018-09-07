@@ -1,0 +1,56 @@
+<% include partials/header %>
+
+<div class="wrap">
+    <div class="slider">
+      <div class="slide slide1">
+        <div class="slide-content">
+        </div>
+      </div>
+      <div class="slide slide2">
+        <div class="slide-content">
+        </div>
+      </div>
+      <div class="slide slide3">
+        <div class="slide-content">
+        </div>
+      </div>
+      <div class="slide slide4">
+        <div class="slide-content">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let sliderImages = document.querySelectorAll('.slide'),
+        current = 0;
+    
+    // Clear all images
+    function reset() {
+      for(let i = 0; i < sliderImages.length; i++){
+        sliderImages[i].style.display = 'none';
+      }
+    }
+    
+    // Initialize slider
+    function startSlide() {
+      reset();
+      sliderImages[0].style.display = 'block';
+    }
+
+    // Show next 
+    setInterval(function slideRight() {
+      reset();
+      if(current < sliderImages.length - 1) {
+        sliderImages[current + 1].style.display = 'block';
+        current++;
+      } else {
+        current = 0;
+        sliderImages[current].style.display = 'block';
+      }
+    }, 3000);
+
+    startSlide();
+  </script>
+
+<% include partials/footer %>

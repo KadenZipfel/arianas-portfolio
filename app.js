@@ -1,54 +1,20 @@
 const express = require('express');
 const app = express();
-
+const methodOverride = require('method-override');
+const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
+app.use(methodOverride('_method'));
 
-// Index Page
-app.get('/', (req, res) => {
-  res.render('index');
-});
+const indexRoutes = require('./routes/index');
+const galleryRoutes = require('./routes/gallery');
 
-// About Page
-app.get('/about', (req, res) => {
-  res.render('about');
-});
-
-// Contact Page
-app.get('/contact', (req, res) => {
-  res.render('contact');
-});
-
-// Booking Page
-app.get('/booking', (req, res) => {
-  res.render('booking');
-});
-
-// Portfolio Routes
-// ----------------
-
-// Family Page
-app.get('/family', (req, res) => {
-  res.render('family');
-});
-
-// Headshots Page
-app.get('/couples', (req, res) => {
-  res.render('couples');
-});
-
-// Creative Page
-app.get('/creative', (req, res) => {
-  res.render('creative');
-});
-
-// Nature Page
-app.get('/nature', (req, res) => {
-  res.render('nature');
-});
+app.use(indexRoutes);
+app.use('/gallery', galleryRoutes);
 
 app.listen(PORT, () => {
     console.log('The server is running');
