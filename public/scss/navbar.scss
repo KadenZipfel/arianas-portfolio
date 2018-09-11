@@ -26,6 +26,50 @@
     align-items: center;
     padding-right: 2rem;
 
+    &--dropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover .nav__right--dropdown-list {
+        display: block;
+        animation: 0.3s dropdown forwards;
+      }
+
+      span {
+        font-size: 1.5rem;
+      }
+
+      &-list {
+        display: none;
+        position: absolute;
+
+        &--item {
+          list-style: none;
+          padding: 1rem 2rem;
+          background-color: #f2f2f2;
+          transition: 0.3s;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+
+          &:nth-of-type(even) {
+            background-color: white;
+          }
+
+          &:hover {
+            background-color: $font-color;
+
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
     &--item {
       font-size: 2rem;
       list-style: none;
@@ -51,6 +95,7 @@
   height: 5rem;
   display: none;
   position: fixed;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   background-color: white;
@@ -87,6 +132,37 @@
     justify-content: center;
     height: 100vh;
 
+    &--drop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+
+      &--list {
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+
+        &--item {
+          list-style: none;
+          padding: 1rem 2rem;
+          transition: 0.5s;
+
+          &:hover {
+            background-color: black;
+            color: white;
+
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
     &--item {
       list-style: none;
       padding: 1rem 2rem;
@@ -95,8 +171,9 @@
       font-size: 2rem;
       transition: 0.5s;
 
-      &:hover {
+      &:hover:not(.nav--collapsed__dropdown--drop) {
         background-color: black;
+        color: white;
 
         a {
           color: white;

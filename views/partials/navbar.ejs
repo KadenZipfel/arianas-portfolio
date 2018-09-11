@@ -2,7 +2,15 @@
   <a href="/" class="nav__brand"><img src="img/brand.png" alt="Ariana Roach Photography" class="nav__brand"></a>
   <ul class="nav__right">
     <li class="nav__right--item"><a href="/about">About</a></li>
-    <li class="nav__right--item"><a href="#">Gallery</a></li>
+    <li class="nav__right--item nav__right--dropdown" id="gallery-dropdown">Gallery
+      <ul class="nav__right--dropdown-list text-center" id="gallery-dropdown-list">
+        <li class="nav__right--dropdown-list--item"><a href="/gallery/portraits">Portraits</a></li>
+        <li class="nav__right--dropdown-list--item"><a href="/gallery/family">Family</a></li>
+        <li class="nav__right--dropdown-list--item"><a href="/gallery/couples">Couples</a></li>
+        <li class="nav__right--dropdown-list--item"><a href="/gallery/kids">Kids</a></li>
+        <li class="nav__right--dropdown-list--item"><a href="/gallery/babies">Babies</a></li>
+      </ul>
+    </li>
     <li class="nav__right--item"><a href="/booking">Booking</a></li>
     <li class="nav__right--item"><a href="/contact">Contact</a></li>
     <li class="nav__right--item"><a href="/faq">FAQ</a></li>
@@ -15,7 +23,15 @@
   <i class="fas fa-times fa-2x nav--collapsed__x" id="close-nav"></i>
   <ul class="nav--collapsed__dropdown" id="nav-dropdown">
     <li class="nav--collapsed__dropdown--item"><a href="/about">About</a></li>
-    <li class="nav--collapsed__dropdown--item"><a href="#">Gallery</a></li>
+    <li class="nav--collapsed__dropdown--item nav--collapsed__dropdown--drop" id="drop"><span id="gallery">Gallery</span>
+      <ul class="nav--collapsed__dropdown--drop--list" id="drop-list">
+        <li class="nav--collapsed__dropdown--drop--list--item"><a href="/gallery/portraits">Portraits</a></li>
+        <li class="nav--collapsed__dropdown--drop--list--item"><a href="/gallery/family">Family</a></li>
+        <li class="nav--collapsed__dropdown--drop--list--item"><a href="/gallery/couples">Couples</a></li>
+        <li class="nav--collapsed__dropdown--drop--list--item"><a href="/gallery/kids">Kids</a></li>
+        <li class="nav--collapsed__dropdown--drop--list--item"><a href="/gallery/babies">Babies</a></li>
+      </ul>
+    </li>
     <li class="nav--collapsed__dropdown--item"><a href="/booking">Booking</a></li>
     <li class="nav--collapsed__dropdown--item"><a href="/contact">Contact</a></li>
     <li class="nav--collapsed__dropdown--item"><a href="/faq">FAQ</a></li>
