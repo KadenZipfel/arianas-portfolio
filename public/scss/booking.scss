@@ -1,17 +1,129 @@
 .booking {
-  margin-top: 12rem;
+  padding: 13rem 8rem 2rem 8rem;
+
+  &__p {
+    font-size: 2rem;
+    text-transform: lowercase;
+    letter-spacing: 0.3rem;
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
 
   &__card {
     margin: 1rem;
-    padding: 1rem 2rem;
-    border: 1px solid $font-color;
-    border-radius: 5px;
-    height: 30vh;
+    position: relative;
+    padding: 0 2rem;
+    height: 38vh;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+    animation: 1s fade forwards;
 
-    &--list {
-      list-style: none;
-      text-transform: lowercase;
-      font-size: 2rem;
+    &--1 {
+      background-image: url('/img/booking1.jpg');
+      filter: grayscale(20%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &--2 {
+      background-image: url('/img/booking2.jpg');
+      filter: grayscale(20%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &--3 {
+      background-image: url('/img/booking3.jpg');
+      filter: grayscale(20%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &--4 {
+      background-image: url('/img/booking4.jpg');
+      filter: grayscale(20%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &--5 {
+      background-image: url('/img/booking5.jpg');
+      filter: grayscale(20%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &--6 {
+      background-image: url('/img/booking6.jpg');
+      filter: grayscale(20%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--title {
+      padding-top: 1rem;
+      font-family: 'Lato';
+      font-weight: 700;
+      font-size: 5rem;
+      color: white;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    &--subtitle {
+      font-size: 3rem;
+      margin-top: -0.8rem;
+      letter-spacing: 0.8rem;
+      color: white;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    &--btn {
+
+      &,
+      &:link,
+      &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.3rem;
+        padding: 1.5rem 4rem;
+        width: 50%;
+        margin: 0 auto;
+        display: inline-block;
+        font-family: 'Lato';
+        font-weight: bold;
+        background-color: white;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 70%;
+        left: 25%;
+        opacity: 0;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        &:active {
+          transform: translateY(2px);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    &:hover .booking__card--btn {
+      opacity: 1;
     }
   }
 }

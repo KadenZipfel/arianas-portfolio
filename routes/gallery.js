@@ -3,27 +3,27 @@ const router = express.Router();
 
 // Family Page
 router.get('/family', (req, res) => {
-  res.render('gallery/family');
+  res.render('family');
 });
 
 // Couples Page
 router.get('/couples', (req, res) => {
-  res.render('gallery/couples');
+  res.render('couples');
 });
 
 // Portraits Page
 router.get('/portraits', (req, res) => {
-  res.render('gallery/portraits');
+  res.render('portraits');
 });
 
 // Kids Page
 router.get('/kids', (req, res) => {
-  res.render('gallery/kids');
+  res.render('kids');
 });
 
 // Babies Page
 router.get('/babies', (req, res) => {
-  res.render('gallery/babies');
+  res.render('babies');
 });
 
 module.exports = router;

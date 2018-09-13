@@ -14,7 +14,7 @@ const indexRoutes = require('./routes/index');
 const galleryRoutes = require('./routes/gallery');
 
 app.use(indexRoutes);
-app.use('/gallery', galleryRoutes);
+app.use(galleryRoutes);
 
 app.listen(PORT, () => {
     console.log('The server is running');
