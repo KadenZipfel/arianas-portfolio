@@ -186,6 +186,107 @@ body, #slider, .wrap, .slide-content {
     letter-spacing: 0.3rem; }
     .booking__p a:hover {
       text-decoration: none; }
+  .booking__popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    transition: all .2s; }
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      .booking__popup {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.3); } }
+    .booking__popup i {
+      position: absolute;
+      top: 5%;
+      right: 3.5%;
+      cursor: pointer; }
+    .booking__popup--1, .booking__popup--2, .booking__popup--3, .booking__popup--4, .booking__popup--5, .booking__popup--6 {
+      visibility: hidden; }
+    .booking__popup__content {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 75%;
+      width: 75%;
+      background-color: white;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+      display: table;
+      overflow: hidden; }
+      .booking__popup__content--title {
+        padding-left: 2rem;
+        font-family: Lato;
+        font-weight: 700;
+        font-size: 7rem;
+        text-transform: lowercase; }
+      .booking__popup__content--subtitle {
+        padding-left: 2rem;
+        font-size: 5rem;
+        margin-top: -0.8rem;
+        letter-spacing: 1rem; }
+      .booking__popup__content--description {
+        background-color: #845d40;
+        height: 60%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        color: white;
+        padding: 1rem; }
+        .booking__popup__content--description h3 {
+          margin: 3rem 1rem;
+          font-size: 3rem;
+          line-height: 2rem;
+          letter-spacing: .3rem;
+          text-transform: lowercase;
+          text-align: right; }
+        .booking__popup__content--description p {
+          margin: 3rem 1rem;
+          font-size: 2rem;
+          line-height: 3.5rem;
+          letter-spacing: .2rem;
+          text-transform: lowercase; }
+        .booking__popup__content--description li {
+          margin: 1rem;
+          list-style: none;
+          font-size: 2rem;
+          letter-spacing: .2rem;
+          text-transform: lowercase;
+          text-align: right; }
+      .booking__popup__content--btn, .booking__popup__content--btn:link, .booking__popup__content--btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.3rem;
+        padding: 1.5rem 4rem;
+        width: 50%;
+        margin: 0 auto;
+        display: inline-block;
+        font-family: 'Lato';
+        font-weight: bold;
+        background-color: white;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        left: 25%;
+        margin-top: 1rem;
+        color: black; }
+        .booking__popup__content--btn:hover, .booking__popup__content--btn:link:hover, .booking__popup__content--btn:visited:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15); }
+        .booking__popup__content--btn:active, .booking__popup__content--btn:link:active, .booking__popup__content--btn:visited:active {
+          transform: translateY(2px);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15); }
+        .booking__popup__content--btn:focus, .booking__popup__content--btn:link:focus, .booking__popup__content--btn:visited:focus {
+          outline: none; }
   .booking__card {
     margin: 1rem;
     position: relative;
