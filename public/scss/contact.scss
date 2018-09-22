@@ -1,0 +1,30 @@
+.contact {
+  margin-top: 13rem;
+
+  &__title {
+    margin: 2rem;
+    font-family: 'Lato';
+    font-weight: 700;
+    text-transform: lowercase;
+  }
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+  
+  &:focus {
+    font-size: 0;
+
+    .loader {
+      justify-content: center;
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      border: 3px solid lightgrey;
+      border-left-color: blue;
+      border-radius: 50%;
+      animation: rotation .5s cubic-bezier(.17,.67,.83,.67) infinite;
+    }
+  }
+}
