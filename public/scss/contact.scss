@@ -1,11 +1,91 @@
 .contact {
-  margin-top: 13rem;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  position: relative;
+
+  &__alert {
+    margin-top: 13rem;
+
+    @media(max-width: 800px) {
+      margin-top: 7rem;
+    }
+  }
 
   &__title {
-    margin: 2rem;
+    margin: 2rem 2rem 0 2rem;
     font-family: 'Lato';
     font-weight: 700;
     text-transform: lowercase;
+    letter-spacing: .3rem;
+
+    @media(max-width: 800px) {
+      margin: 1rem;
+    }
+  }
+
+  &__well {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60vh;
+    width: 35vw;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @media(max-width: 800px) {
+      top: 55%;
+      height: 80vh;
+      width: 90vw;
+    }
+  }
+
+  &__textbox {
+    border: none;
+    border-bottom: 1px solid rgba($font-color, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.6rem;
+    width: 80%;
+
+    @media(max-width: 800px) {
+      width: 95%;
+    }
+
+    &:hover {
+      border-bottom: 1px solid $font-color;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $font-color;
+      color: $font-color;
+    }
+  }
+
+  &__button {
+    background-color: $font-color;
+    color: white;
+    border: none;
+    padding: 1rem 5rem;
+    text-transform: uppercase;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    &:hover {
+      background-color: black;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background-color: $font-color;
+    }
   }
 }
 
