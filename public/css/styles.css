@@ -187,6 +187,9 @@ body, #slider, .wrap, .slide-content {
 
 .booking {
   padding: 13rem 8rem 2rem 8rem; }
+  @media (max-width: 800px) {
+    .booking {
+      padding: 4rem 1rem 2rem 1rem; } }
   .booking__p {
     font-size: 2rem;
     text-transform: lowercase;
@@ -231,11 +234,17 @@ body, #slider, .wrap, .slide-content {
         font-weight: 700;
         font-size: 7rem;
         text-transform: lowercase; }
+        @media (max-width: 800px) {
+          .booking__popup__content--title {
+            font-size: 5rem; } }
       .booking__popup__content--subtitle {
         padding-left: 2rem;
         font-size: 5rem;
         margin-top: -0.8rem;
         letter-spacing: 1rem; }
+        @media (max-width: 800px) {
+          .booking__popup__content--subtitle {
+            font-size: 3rem; } }
       .booking__popup__content--description {
         background-color: #845d40;
         height: 60%;
@@ -344,12 +353,19 @@ body, #slider, .wrap, .slide-content {
       font-size: 5rem;
       color: white;
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
+      @media (max-width: 800px) {
+        .booking__card--title {
+          font-size: 3rem; } }
     .booking__card--subtitle {
       font-size: 3rem;
       margin-top: -0.8rem;
       letter-spacing: 0.8rem;
       color: white;
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
+      @media (max-width: 800px) {
+        .booking__card--subtitle {
+          font-size: 2rem;
+          letter-spacing: .5rem; } }
     .booking__card--btn, .booking__card--btn:link, .booking__card--btn:visited {
       text-transform: uppercase;
       text-decoration: none;
@@ -489,3 +505,60 @@ body, #slider, .wrap, .slide-content {
       border-left-color: blue;
       border-radius: 50%;
       animation: rotation 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite; }
+
+.about {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  align-items: center; }
+  @media (max-width: 1200px) {
+    .about {
+      flex-direction: column;
+      margin-top: 3.5rem; } }
+  .about__img {
+    height: auto;
+    width: 90%;
+    margin: 3rem; }
+    @media (max-width: 1200px) {
+      .about__img {
+        width: 80%; } }
+  .about__info {
+    margin: 3rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem; }
+    @media (max-width: 1200px) {
+      .about__info {
+        text-align: center; } }
+  .about__reviews {
+    margin: 3rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    text-align: right; }
+    .about__reviews__author {
+      font-size: 2.2rem; }
+    @media (max-width: 1200px) {
+      .about__reviews {
+        text-align: center; } }
+
+.col {
+  width: 33.3%; }
+  @media (max-width: 1200px) {
+    .col {
+      width: 100%; } }
+
+.social {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%); }
+  .social i {
+    color: #303030;
+    margin: 1rem; }
+    .social i:hover {
+      color: black; }
+  @media (max-width: 1200px) {
+    .social {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: center; } }

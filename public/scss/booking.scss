@@ -1,6 +1,10 @@
 .booking {
   padding: 13rem 8rem 2rem 8rem;
 
+  @media(max-width: 800px) {
+    padding: 4rem 1rem 2rem 1rem;
+  }
+
   &__p {
     font-size: 2rem;
     text-transform: lowercase;
@@ -61,6 +65,10 @@
         font-weight: 700;
         font-size: 7rem;
         text-transform: lowercase;
+
+        @media(max-width: 800px) {
+          font-size: 5rem;
+        }
       }
 
       &--subtitle {
@@ -68,6 +76,10 @@
         font-size: 5rem;
         margin-top: -0.8rem;
         letter-spacing: 1rem;
+
+        @media(max-width: 800px) {
+          font-size: 3rem;
+        }
       }
 
       &--description {
@@ -208,6 +220,10 @@
       font-size: 5rem;
       color: white;
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+      @media(max-width: 800px) {
+        font-size: 3rem;
+      }
     }
 
     &--subtitle {
@@ -216,6 +232,11 @@
       letter-spacing: 0.8rem;
       color: white;
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+      @media(max-width: 800px) {
+        font-size: 2rem;
+        letter-spacing: .5rem;
+      }
     }
 
     &--btn {
