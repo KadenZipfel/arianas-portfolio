@@ -47,6 +47,41 @@ router.get('/booking', (req, res) => {
   res.render('booking');
 });
 
+// Booking Form
+router.get('/bookingform', (req, res) => {
+  res.render('bookingform', {message: req.flash('success'), query: req.query});
+});
+
+// Booking Form Logic
+router.post('/bookingform', (req, res) => {
+  let transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: !1,
+    auth: {
+      user: keys.google.user,
+      pass: keys.google.pass
+    }
+  }),
+  mailOptions = {
+    from: '"Booking Form" <kadenzipfel@gmail.com>',
+    to: 'kaden.zipfel@hotmail.com',
+    subject: 'New booking form message',
+    text: 
+      `
+      Name: ${req.body.name}, 
+      Email: ${req.body.email}, 
+      Phone: ${req.body.phone}, 
+      How can I help capture your milestones: ${req.body.milestones}, 
+      Session Type: ${req.body.session}, 
+      How did you find out about me: ${req.body.how}`
+  };
+  transporter.sendMail(mailOptions, (error, info) => {
+    if(error) return console.log(error)
+  }), req.flash('success', 'Message Sent! We will be in contact shortly.'), 
+  res.redirect('back');
+});
+
 // FAQ Page
 router.get('/faq', (req, res) => {
   res.render('faq');

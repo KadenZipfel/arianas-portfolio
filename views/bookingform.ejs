@@ -1,0 +1,73 @@
+<% include partials/header %>
+
+<div class="contact">
+  <div class="col-md-4 col-md-offset-4">
+    <% if(message && message.length > 0) { %>
+      <div class="contact__alert alert alert-success text-center" role="alert">
+        <%= message %>
+      </div>
+    <% } %>
+  </div>
+  <form action="/bookingform" method="POST" id="contact">
+    <div class="contact__well">
+      <h3 class="contact__title text-center">
+        book now
+      </h3>
+      <input type="text" class="contact__textbox" 
+      name="name" placeholder="Name" required>
+      <input type="email" class="contact__textbox" 
+      name="email" placeholder="Email" required>
+      <input type="text" class="contact__textbox"
+      name="phone" placeholder="Phone Number (optional)">
+      <input type="text" class="contact__textbox"
+      name="milestones" 
+      placeholder="How can I help capture your milestones?" 
+      required>
+      <label for="session">Session Type</label>
+      <select name="session" id="session" class="contact__dropdown">
+        <option value="famlocation"
+          <% if(query.id === '1') { %>
+            selected="selected"
+          <% } %>
+        >Family On Location</option>
+        <option value="famhome"
+          <% if(query.id === '2') { %>
+            selected="selected"
+          <% } %>
+        >Family At Home</option>
+        <option value="kids"
+          <% if(query.id === '3') { %>
+            selected="selected"
+          <% } %>
+        >Kids Mini</option>
+        <option value="teenadult"
+          <% if(query.id === '4') { %>
+            selected="selected"
+          <% } %>
+        >Teen/Adult Portrait</option>
+        <option value="couplesvan"
+          <% if(query.id === '5') { %>
+            selected="selected"
+          <% } %>
+        >Couples/Engagement On Location</option>
+        <option value="coupleslocation"
+          <% if(query.id === '6') { %>
+            selected="selected"
+          <% } %>
+        >Couples/Engagement Vancouver</option>
+      </select>
+      <label for="how">How did you find out about me?</label>
+      <select name="how" id="how" class="contact__dropdown">
+        <option value="facebook">Facebook</option>
+        <option value="google">Google Search</option>
+        <option value="mouth">Word of Mouth</option>
+        <option value="card">Business Card</option>
+        <option value="instagram">Instagram</option>
+        <option value="other">Other</option>
+      </select>
+      <button class="contact__button" id="btn"><div class="loader"></div>Submit</button>
+    </div>
+  </form>
+</div>
+
+<% include partials/footer %>

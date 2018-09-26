@@ -203,8 +203,7 @@ body, #slider, .wrap, .slide-content {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 10;
-    transition: all .2s; }
+    z-index: 10; }
     @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
       .booking__popup {
         -webkit-backdrop-filter: blur(10px);
@@ -215,6 +214,10 @@ body, #slider, .wrap, .slide-content {
       top: 5%;
       right: 3.5%;
       cursor: pointer; }
+      @media (max-width: 800px) {
+        .booking__popup i {
+          top: 2%;
+          font-size: 1.6rem; } }
     .booking__popup--1, .booking__popup--2, .booking__popup--3, .booking__popup--4, .booking__popup--5, .booking__popup--6 {
       visibility: hidden; }
     .booking__popup__content {
@@ -228,23 +231,51 @@ body, #slider, .wrap, .slide-content {
       box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
       display: table;
       overflow: hidden; }
+      @media (max-width: 800px) {
+        .booking__popup__content {
+          height: 90%;
+          width: 90%;
+          margin-top: -2.5rem; } }
       .booking__popup__content--title {
         padding-left: 2rem;
         font-family: Lato;
         font-weight: 700;
         font-size: 7rem;
         text-transform: lowercase; }
-        @media (max-width: 800px) {
+        @media (max-width: 1200px) {
           .booking__popup__content--title {
             font-size: 5rem; } }
+        @media (max-width: 800px) {
+          .booking__popup__content--title {
+            font-size: 3rem;
+            padding-left: 1.4rem;
+            margin-top: 1rem; } }
       .booking__popup__content--subtitle {
         padding-left: 2rem;
         font-size: 5rem;
         margin-top: -0.8rem;
         letter-spacing: 1rem; }
-        @media (max-width: 800px) {
+        @media (max-width: 1200px) {
           .booking__popup__content--subtitle {
             font-size: 3rem; } }
+        @media (max-width: 800px) {
+          .booking__popup__content--subtitle {
+            font-size: 2rem;
+            padding-left: 1.4rem;
+            margin-top: 0; } }
+      .booking__popup__content--price {
+        font-family: 'Lato', sans-serif;
+        font-size: 8rem;
+        position: absolute;
+        top: 18%;
+        right: 3%; }
+        @media (max-width: 1200px) {
+          .booking__popup__content--price {
+            font-size: 4rem; } }
+        @media (max-width: 800px) {
+          .booking__popup__content--price {
+            font-size: 2rem;
+            top: 20%; } }
       .booking__popup__content--description {
         background-color: #845d40;
         height: 60%;
@@ -253,48 +284,92 @@ body, #slider, .wrap, .slide-content {
         bottom: 0;
         color: white;
         padding: 1rem; }
-        .booking__popup__content--description h3 {
-          margin: 3rem 1rem;
-          font-size: 3rem;
-          line-height: 2rem;
-          letter-spacing: .3rem;
-          text-transform: lowercase;
-          text-align: right; }
+        @media (max-width: 1200px) {
+          .booking__popup__content--description {
+            height: 67%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-bottom: 7rem; } }
+        @media (max-width: 800px) {
+          .booking__popup__content--description {
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: .5rem .5rem 7rem .5rem; } }
         .booking__popup__content--description p {
-          margin: 3rem 1rem;
+          margin: 3rem 1rem 0rem 1rem;
           font-size: 2rem;
           line-height: 3.5rem;
           letter-spacing: .2rem;
-          text-transform: lowercase; }
-        .booking__popup__content--description li {
-          margin: 1rem;
-          list-style: none;
-          font-size: 2rem;
-          letter-spacing: .2rem;
           text-transform: lowercase;
           text-align: right; }
+          @media (max-width: 1200px) {
+            .booking__popup__content--description p {
+              font-size: 1.8rem;
+              line-height: 1.8rem;
+              letter-spacing: .15rem;
+              text-align: center; } }
+          @media (max-width: 800px) {
+            .booking__popup__content--description p {
+              margin: 0;
+              font-size: 1.6rem;
+              line-height: 1.6rem;
+              letter-spacing: .1rem;
+              text-align: center; } }
+        .booking__popup__content--description li {
+          margin: 2rem 1rem 0rem 1rem;
+          list-style: bullet;
+          font-size: 2rem;
+          letter-spacing: .2rem;
+          text-transform: lowercase; }
+          @media (max-width: 1200px) {
+            .booking__popup__content--description li {
+              margin: 1rem auto;
+              font-size: 1.8rem;
+              line-height: 1.8rem;
+              letter-spacing: .15rem;
+              text-align: center;
+              list-style: none; } }
+          @media (max-width: 800px) {
+            .booking__popup__content--description li {
+              margin: .5rem auto;
+              font-size: 1.6rem;
+              line-height: 1.6rem;
+              letter-spacing: .1rem;
+              text-align: center;
+              list-style: none; } }
       .booking__popup__content--btn, .booking__popup__content--btn:link, .booking__popup__content--btn:visited {
         text-transform: uppercase;
         text-decoration: none;
         letter-spacing: 0.3rem;
         padding: 1.5rem 4rem;
         width: 50%;
-        margin: 0 auto;
+        margin: 1rem auto;
         display: inline-block;
         font-family: 'Lato';
         font-weight: bold;
         background-color: white;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
         border-radius: 10rem;
-        transition: all .2s;
-        position: relative;
+        transition: .2s;
         font-size: 1.6rem;
         border: none;
         cursor: pointer;
         position: absolute;
         left: 25%;
         margin-top: 1rem;
+        text-align: center;
         color: black; }
+        @media (max-width: 800px) {
+          .booking__popup__content--btn, .booking__popup__content--btn:link, .booking__popup__content--btn:visited {
+            padding: 1rem 2.5rem;
+            width: 70%;
+            opacity: 1;
+            left: 15%;
+            font-size: 1.4rem;
+            letter-spacing: .2rem; } }
         .booking__popup__content--btn:hover, .booking__popup__content--btn:link:hover, .booking__popup__content--btn:visited:hover {
           transform: translateY(-2px);
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15); }
@@ -396,6 +471,14 @@ body, #slider, .wrap, .slide-content {
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15); }
       .booking__card--btn:focus, .booking__card--btn:link:focus, .booking__card--btn:visited:focus {
         outline: none; }
+      @media (max-width: 800px) {
+        .booking__card--btn, .booking__card--btn:link, .booking__card--btn:visited {
+          padding: 1rem 2.5rem;
+          width: 70%;
+          opacity: 1;
+          left: 15%;
+          font-size: 1.4rem;
+          letter-spacing: .2rem; } }
     .booking__card:hover .booking__card--btn {
       opacity: 1; }
 
@@ -420,6 +503,12 @@ body, #slider, .wrap, .slide-content {
     opacity: 0; }
   100% {
     opacity: 100%; } }
+
+@keyframes fadeout {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 @keyframes rotation {
   100% {
@@ -475,6 +564,20 @@ body, #slider, .wrap, .slide-content {
     .contact__textbox:focus {
       outline: none;
       border-bottom: 1px solid #303030;
+      color: #303030; }
+  .contact__dropdown {
+    border: none;
+    border-bottom: 1px solid rgba(48, 48, 48, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.6rem;
+    width: 80%; }
+    @media (max-width: 800px) {
+      .contact__dropdown {
+        width: 95%; } }
+    .contact__dropdown:hover {
+      border-bottom: 1px solid #303030; }
+    .contact__dropdown:focus {
+      outline: none;
       color: #303030; }
   .contact__button {
     background-color: #303030;

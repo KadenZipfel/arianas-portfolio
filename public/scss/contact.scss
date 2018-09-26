@@ -66,6 +66,27 @@
     }
   }
 
+  &__dropdown {
+    border: none;
+    border-bottom: 1px solid rgba($font-color, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.6rem;
+    width: 80%;
+
+    @media(max-width: 800px) {
+      width: 95%;
+    }
+
+    &:hover {
+      border-bottom: 1px solid $font-color;
+    }
+
+    &:focus {
+      outline: none;
+      color: $font-color;
+    }
+  }
+
   &__button {
     background-color: $font-color;
     color: white;
