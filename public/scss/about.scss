@@ -1,8 +1,7 @@
 .about {
   position: relative;
-  min-height: 100%;
   display: flex;
-  align-items: center;
+  margin-top: 13rem;
 
   @media(max-width: 1200px) {
     flex-direction: column;
