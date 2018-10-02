@@ -12,20 +12,17 @@ body, #slider, .wrap, .slide-content {
 
 .slide {
   background-size: cover;
-  background-position: center;
+  background-position: 0% 35%;
   background-repeat: no-repeat;
 }
 
 .slide1 {
-  background-image: url('/img/back_img1.jpg');
-}
-.slide2 {
   background-image: url('/img/back_img2.jpg');
 }
-.slide3 {
+.slide2 {
   background-image: url('/img/back_img3.jpg');
 }
-.slide4 {
+.slide3 {
   background-image: url('/img/back_img4.jpg');
 }
 

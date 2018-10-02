@@ -165,19 +165,16 @@ body, #slider, .wrap, .slide-content {
 
 .slide {
   background-size: cover;
-  background-position: center;
+  background-position: 0% 35%;
   background-repeat: no-repeat; }
 
 .slide1 {
-  background-image: url("/img/back_img1.jpg"); }
-
-.slide2 {
   background-image: url("/img/back_img2.jpg"); }
 
-.slide3 {
+.slide2 {
   background-image: url("/img/back_img3.jpg"); }
 
-.slide4 {
+.slide3 {
   background-image: url("/img/back_img4.jpg"); }
 
 .slide-content {
@@ -629,7 +626,7 @@ body, #slider, .wrap, .slide-content {
   .about__info {
     margin: 3rem;
     font-size: 1.8rem;
-    line-height: 2.8rem; }
+    line-height: 2rem; }
     @media (max-width: 1200px) {
       .about__info {
         text-align: center; } }
@@ -649,6 +646,18 @@ body, #slider, .wrap, .slide-content {
   @media (max-width: 1200px) {
     .col {
       width: 100%; } }
+
+.gallery {
+  margin-top: 13rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  animation: 1s fade forwards; }
+  .gallery .gallery__img {
+    width: 100%;
+    margin: 2rem auto; }
+    .gallery .gallery__img img {
+      width: 100%; }
 
 .social {
   position: fixed;
