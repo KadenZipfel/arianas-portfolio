@@ -1,8 +1,7 @@
 .about {
   position: relative;
-  min-height: 100%;
   display: flex;
-  align-items: center;
+  margin-top: 13rem;
 
   @media(max-width: 1200px) {
     flex-direction: column;
@@ -50,28 +49,5 @@
 
   @media(max-width: 1200px) {
     width: 100%;
-  }
-}
-
-.social {
-  position: fixed;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-
-  i {
-    color: $font-color; 
-    margin: 1rem;
-
-    &:hover {
-      color: black;
-    }
-  }
-
-  @media(max-width: 1200px) {
-    position: relative;
-    display: flex;
-    width: 100%;
-    justify-content: center;
   }
 }

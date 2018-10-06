@@ -65,7 +65,7 @@ router.post('/bookingform', (req, res) => {
   }),
   mailOptions = {
     from: '"Booking Form" <kadenzipfel@gmail.com>',
-    to: 'kaden.zipfel@hotmail.com',
+    to: 'arianaroche@gmail.com',
     subject: 'New booking form message',
     text: 
       `

@@ -22,7 +22,7 @@ body {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   z-index: 100;
   transition: 0.3s; }
-  @media (max-width: 800px) {
+  @media (max-width: 1200px) {
     .nav {
       display: none; } }
   .nav__brand {
@@ -90,7 +90,7 @@ body {
   background-color: white;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   z-index: 1; }
-  @media (max-width: 800px) {
+  @media (max-width: 1200px) {
     .nav--collapsed {
       display: flex; } }
   .nav--collapsed__brand {
@@ -117,10 +117,11 @@ body {
       flex-direction: column;
       align-items: center;
       cursor: pointer; }
+      .nav--collapsed__dropdown--drop span span {
+        font-size: 1.2rem; }
       .nav--collapsed__dropdown--drop--list {
         display: none;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         transition: 0.3s; }
@@ -128,6 +129,8 @@ body {
           list-style: none;
           padding: 1rem 2rem;
           transition: 0.5s; }
+          .nav--collapsed__dropdown--drop--list--item:nth-of-type(odd) {
+            background-color: #f2f2f2; }
           .nav--collapsed__dropdown--drop--list--item:hover {
             background-color: black;
             color: white; }
@@ -136,7 +139,6 @@ body {
     .nav--collapsed__dropdown--item {
       list-style: none;
       padding: 1rem 2rem;
-      margin: 1rem;
       text-transform: lowercase;
       font-size: 2rem;
       transition: 0.5s; }
@@ -163,20 +165,29 @@ body, #slider, .wrap, .slide-content {
 
 .slide {
   background-size: cover;
-  background-position: center;
+  background-position: 0% 35%;
   background-repeat: no-repeat; }
+  @media (max-width: 1200px) {
+    .slide {
+      background-position: center; } }
 
 .slide1 {
-  background-image: url("/img/back_img1.jpg"); }
+  background-image: url("/img/back_img2.jpg"); }
+  @media (max-width: 1200px) {
+    .slide1 {
+      background-image: url("/img/vertback1.jpg"); } }
 
 .slide2 {
-  background-image: url("/img/back_img2.jpg"); }
+  background-image: url("/img/back_img3.jpg"); }
+  @media (max-width: 1200px) {
+    .slide2 {
+      background-image: url("/img/vertback2.jpg"); } }
 
 .slide3 {
-  background-image: url("/img/back_img3.jpg"); }
-
-.slide4 {
   background-image: url("/img/back_img4.jpg"); }
+  @media (max-width: 1200px) {
+    .slide3 {
+      background-image: url("/img/vertback3.jpg"); } }
 
 .slide-content {
   display: flex;
@@ -384,7 +395,7 @@ body, #slider, .wrap, .slide-content {
     padding: 0 2rem;
     height: 38vh;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-    animation: 1s fade forwards; }
+    animation: 3s fade forwards; }
     .booking__card--1 {
       background-image: url("/img/booking1.jpg");
       filter: grayscale(20%);
@@ -611,9 +622,8 @@ body, #slider, .wrap, .slide-content {
 
 .about {
   position: relative;
-  min-height: 100%;
   display: flex;
-  align-items: center; }
+  margin-top: 13rem; }
   @media (max-width: 1200px) {
     .about {
       flex-direction: column;
@@ -649,6 +659,21 @@ body, #slider, .wrap, .slide-content {
     .col {
       width: 100%; } }
 
+.gallery {
+  margin-top: 13rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  animation: 1s fade forwards; }
+  .gallery .gallery__img {
+    width: 100%;
+    margin: 2rem auto; }
+    .gallery .gallery__img img {
+      width: 100%; }
+  @media (max-width: 1200px) {
+    .gallery {
+      margin-top: 3.5rem; } }
+
 .social {
   position: fixed;
   bottom: 5%;
@@ -661,7 +686,9 @@ body, #slider, .wrap, .slide-content {
       color: black; }
   @media (max-width: 1200px) {
     .social {
-      position: relative;
       display: flex;
-      width: 100%;
-      justify-content: center; } }
+      flex-direction: column;
+      left: 1%;
+      top: 60%;
+      transform: translate(0, -50%);
+      font-size: 1rem; } }
