@@ -13,4 +13,8 @@
       width: 100%;
     }
   }
+
+  @media(max-width: 1200px) {
+    margin-top: 3.5rem;
+  }
 }

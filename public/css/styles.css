@@ -167,15 +167,27 @@ body, #slider, .wrap, .slide-content {
   background-size: cover;
   background-position: 0% 35%;
   background-repeat: no-repeat; }
+  @media (max-width: 1200px) {
+    .slide {
+      background-position: center; } }
 
 .slide1 {
   background-image: url("/img/back_img2.jpg"); }
+  @media (max-width: 1200px) {
+    .slide1 {
+      background-image: url("/img/vertback1.jpg"); } }
 
 .slide2 {
   background-image: url("/img/back_img3.jpg"); }
+  @media (max-width: 1200px) {
+    .slide2 {
+      background-image: url("/img/vertback2.jpg"); } }
 
 .slide3 {
   background-image: url("/img/back_img4.jpg"); }
+  @media (max-width: 1200px) {
+    .slide3 {
+      background-image: url("/img/vertback3.jpg"); } }
 
 .slide-content {
   display: flex;
@@ -383,7 +395,7 @@ body, #slider, .wrap, .slide-content {
     padding: 0 2rem;
     height: 38vh;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-    animation: 1s fade forwards; }
+    animation: 3s fade forwards; }
     .booking__card--1 {
       background-image: url("/img/booking1.jpg");
       filter: grayscale(20%);
@@ -626,7 +638,7 @@ body, #slider, .wrap, .slide-content {
   .about__info {
     margin: 3rem;
     font-size: 1.8rem;
-    line-height: 2rem; }
+    line-height: 2.8rem; }
     @media (max-width: 1200px) {
       .about__info {
         text-align: center; } }
@@ -658,6 +670,9 @@ body, #slider, .wrap, .slide-content {
     margin: 2rem auto; }
     .gallery .gallery__img img {
       width: 100%; }
+  @media (max-width: 1200px) {
+    .gallery {
+      margin-top: 3.5rem; } }
 
 .social {
   position: fixed;
@@ -671,7 +686,9 @@ body, #slider, .wrap, .slide-content {
       color: black; }
   @media (max-width: 1200px) {
     .social {
-      position: relative;
       display: flex;
-      width: 100%;
-      justify-content: center; } }
+      flex-direction: column;
+      left: 1%;
+      top: 60%;
+      transform: translate(0, -50%);
+      font-size: 1rem; } }

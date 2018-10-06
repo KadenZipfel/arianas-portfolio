@@ -14,16 +14,32 @@ body, #slider, .wrap, .slide-content {
   background-size: cover;
   background-position: 0% 35%;
   background-repeat: no-repeat;
+
+  @media(max-width: 1200px) {
+    background-position: center;
+  }
 }
 
 .slide1 {
   background-image: url('/img/back_img2.jpg');
+
+  @media(max-width: 1200px) {
+    background-image: url('/img/vertback1.jpg');
+  }
 }
 .slide2 {
   background-image: url('/img/back_img3.jpg');
+
+  @media(max-width: 1200px) {
+    background-image: url('/img/vertback2.jpg');
+  }
 }
 .slide3 {
   background-image: url('/img/back_img4.jpg');
+
+  @media(max-width: 1200px) {
+    background-image: url('/img/vertback3.jpg');
+  }
 }
 
 .slide-content {
