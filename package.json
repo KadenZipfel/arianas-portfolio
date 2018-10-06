@@ -1,7 +1,7 @@
 {
   "name": "ariana-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "A photography portfolio for Ariana",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
