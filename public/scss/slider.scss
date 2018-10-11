@@ -15,7 +15,7 @@ body, #slider, .wrap, .slide-content {
   background-position: 0% 35%;
   background-repeat: no-repeat;
 
-  @media(max-width: 1200px) {
+  @media(max-width: 800px) {
     background-position: center;
   }
 }
@@ -23,21 +23,21 @@ body, #slider, .wrap, .slide-content {
 .slide1 {
   background-image: url('/img/back_img2.jpg');
 
-  @media(max-width: 1200px) {
+  @media(max-width: 800px) {
     background-image: url('/img/vertback1.jpg');
   }
 }
 .slide2 {
   background-image: url('/img/back_img3.jpg');
 
-  @media(max-width: 1200px) {
+  @media(max-width: 800px) {
     background-image: url('/img/vertback2.jpg');
   }
 }
 .slide3 {
   background-image: url('/img/back_img4.jpg');
 
-  @media(max-width: 1200px) {
+  @media(max-width: 800px) {
     background-image: url('/img/vertback3.jpg');
   }
 }

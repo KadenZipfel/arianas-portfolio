@@ -167,25 +167,25 @@ body, #slider, .wrap, .slide-content {
   background-size: cover;
   background-position: 0% 35%;
   background-repeat: no-repeat; }
-  @media (max-width: 1200px) {
+  @media (max-width: 800px) {
     .slide {
       background-position: center; } }
 
 .slide1 {
   background-image: url("/img/back_img2.jpg"); }
-  @media (max-width: 1200px) {
+  @media (max-width: 800px) {
     .slide1 {
       background-image: url("/img/vertback1.jpg"); } }
 
 .slide2 {
   background-image: url("/img/back_img3.jpg"); }
-  @media (max-width: 1200px) {
+  @media (max-width: 800px) {
     .slide2 {
       background-image: url("/img/vertback2.jpg"); } }
 
 .slide3 {
   background-image: url("/img/back_img4.jpg"); }
-  @media (max-width: 1200px) {
+  @media (max-width: 800px) {
     .slide3 {
       background-image: url("/img/vertback3.jpg"); } }
 
@@ -309,48 +309,50 @@ body, #slider, .wrap, .slide-content {
             flex-direction: column;
             justify-content: space-around;
             padding: .5rem .5rem 7rem .5rem; } }
-        .booking__popup__content--description p {
-          margin: 3rem 1rem 0rem 1rem;
-          font-size: 2rem;
-          line-height: 3.5rem;
-          letter-spacing: .2rem;
-          text-transform: lowercase;
-          text-align: right; }
-          @media (max-width: 1200px) {
-            .booking__popup__content--description p {
-              font-size: 1.8rem;
-              line-height: 1.8rem;
-              letter-spacing: .15rem;
-              text-align: center; } }
-          @media (max-width: 800px) {
-            .booking__popup__content--description p {
-              margin: 0;
-              font-size: 1.6rem;
-              line-height: 1.6rem;
-              letter-spacing: .1rem;
-              text-align: center; } }
-        .booking__popup__content--description li {
-          margin: 2rem 1rem 0rem 1rem;
-          list-style: bullet;
-          font-size: 2rem;
-          letter-spacing: .2rem;
-          text-transform: lowercase; }
-          @media (max-width: 1200px) {
-            .booking__popup__content--description li {
-              margin: 1rem auto;
-              font-size: 1.8rem;
-              line-height: 1.8rem;
-              letter-spacing: .15rem;
-              text-align: center;
-              list-style: none; } }
-          @media (max-width: 800px) {
-            .booking__popup__content--description li {
-              margin: .5rem auto;
-              font-size: 1.6rem;
-              line-height: 1.6rem;
-              letter-spacing: .1rem;
-              text-align: center;
-              list-style: none; } }
+        .booking__popup__content--description__info {
+          max-height: 80%; }
+          .booking__popup__content--description__info p {
+            margin: 3rem 1rem 0rem 1rem;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            letter-spacing: .2rem;
+            text-transform: lowercase;
+            text-align: right; }
+            @media (max-width: 1200px) {
+              .booking__popup__content--description__info p {
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+                letter-spacing: .15rem;
+                text-align: center; } }
+            @media (max-width: 800px) {
+              .booking__popup__content--description__info p {
+                margin: 0;
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+                letter-spacing: .1rem;
+                text-align: center; } }
+          .booking__popup__content--description__info li {
+            margin: 2rem 1rem 0rem 1rem;
+            list-style: bullet;
+            font-size: 2rem;
+            letter-spacing: .2rem;
+            text-transform: lowercase; }
+            @media (max-width: 1200px) {
+              .booking__popup__content--description__info li {
+                margin: 1rem auto;
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+                letter-spacing: .15rem;
+                text-align: center;
+                list-style: none; } }
+            @media (max-width: 800px) {
+              .booking__popup__content--description__info li {
+                margin: .5rem auto;
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+                letter-spacing: .1rem;
+                text-align: center;
+                list-style: none; } }
       .booking__popup__content--btn, .booking__popup__content--btn:link, .booking__popup__content--btn:visited {
         text-transform: uppercase;
         text-decoration: none;
