@@ -50,7 +50,8 @@ body {
         animation: 0.3s dropdown forwards; }
       .nav__right--dropdown-list {
         display: none;
-        position: absolute; }
+        position: absolute;
+        align-content: center; }
         .nav__right--dropdown-list--item {
           list-style: none;
           padding: 1rem 2rem;
@@ -320,27 +321,27 @@ body, #slider, .wrap, .slide-content {
             text-align: right; }
             @media (max-width: 1200px) {
               .booking__popup__content--description__info p {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 line-height: 1.8rem;
                 letter-spacing: .15rem;
                 text-align: center; } }
             @media (max-width: 800px) {
               .booking__popup__content--description__info p {
                 margin: 0;
-                font-size: 1.6rem;
+                font-size: 1.4rem;
                 line-height: 1.6rem;
                 letter-spacing: .1rem;
                 text-align: center; } }
           .booking__popup__content--description__info li {
             margin: 2rem 1rem 0rem 1rem;
             list-style: bullet;
-            font-size: 2rem;
+            font-size: 1.8rem;
             letter-spacing: .2rem;
             text-transform: lowercase; }
             @media (max-width: 1200px) {
               .booking__popup__content--description__info li {
                 margin: 1rem auto;
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 line-height: 1.8rem;
                 letter-spacing: .15rem;
                 text-align: center;
@@ -348,7 +349,7 @@ body, #slider, .wrap, .slide-content {
             @media (max-width: 800px) {
               .booking__popup__content--description__info li {
                 margin: .5rem auto;
-                font-size: 1.6rem;
+                font-size: 1.4rem;
                 line-height: 1.6rem;
                 letter-spacing: .1rem;
                 text-align: center;
