@@ -313,27 +313,27 @@ body, #slider, .wrap, .slide-content {
         .booking__popup__content--description__info {
           max-height: 80%; }
           .booking__popup__content--description__info p {
-            margin: 3rem 1rem 0rem 1rem;
+            margin: 1rem 1rem 0rem 1rem;
             font-size: 1.8rem;
-            line-height: 3rem;
+            line-height: 2rem;
             letter-spacing: .2rem;
             text-transform: lowercase;
             text-align: right; }
             @media (max-width: 1200px) {
               .booking__popup__content--description__info p {
                 font-size: 1.6rem;
-                line-height: 1.8rem;
+                line-height: 1.6rem;
                 letter-spacing: .15rem;
                 text-align: center; } }
             @media (max-width: 800px) {
               .booking__popup__content--description__info p {
                 margin: 0;
                 font-size: 1.4rem;
-                line-height: 1.6rem;
+                line-height: 1.4rem;
                 letter-spacing: .1rem;
                 text-align: center; } }
           .booking__popup__content--description__info li {
-            margin: 2rem 1rem 0rem 1rem;
+            margin: 1rem 1rem 0rem 1rem;
             list-style: bullet;
             font-size: 1.8rem;
             letter-spacing: .2rem;
@@ -342,7 +342,7 @@ body, #slider, .wrap, .slide-content {
               .booking__popup__content--description__info li {
                 margin: 1rem auto;
                 font-size: 1.6rem;
-                line-height: 1.8rem;
+                line-height: 1.6rem;
                 letter-spacing: .15rem;
                 text-align: center;
                 list-style: none; } }
@@ -350,7 +350,7 @@ body, #slider, .wrap, .slide-content {
               .booking__popup__content--description__info li {
                 margin: .5rem auto;
                 font-size: 1.4rem;
-                line-height: 1.6rem;
+                line-height: 1.4rem;
                 letter-spacing: .1rem;
                 text-align: center;
                 list-style: none; } }
@@ -459,8 +459,10 @@ body, #slider, .wrap, .slide-content {
       text-transform: uppercase;
       text-decoration: none;
       letter-spacing: 0.3rem;
-      padding: 1.5rem 4rem;
+      text-align: center;
+      padding: 1.5rem;
       width: 50%;
+      height: 5.5rem;
       margin: 0 auto;
       display: inline-block;
       font-family: 'Lato';
@@ -476,7 +478,8 @@ body, #slider, .wrap, .slide-content {
       position: absolute;
       top: 70%;
       left: 25%;
-      opacity: 0; }
+      opacity: 0;
+      color: black; }
       .booking__card--btn:hover, .booking__card--btn:link:hover, .booking__card--btn:visited:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15); }
