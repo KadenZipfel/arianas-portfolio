@@ -1,20 +1,19 @@
 .about {
   position: relative;
-  display: flex;
   margin-top: 13rem;
 
   @media(max-width: 1200px) {
-    flex-direction: column;
     margin-top: 3.5rem;
   }
 
   &__img {
     height: auto;
     width: 90%;
-    margin: 3rem;
+    margin: 2rem 5%;
 
     @media(max-width: 1200px) {
       width: 80%;
+      margin: 2rem 10%;
     }
   }
 
@@ -29,10 +28,13 @@
   }
 
   &__reviews {
-    margin: 3rem;
+    margin: 2rem;
     font-size: 1.8rem;
     line-height: 2.8rem;
-    text-align: right;
+    text-align: center;
+    background: #ededed;
+    padding: 2rem;
+    border-radius: 5px;
 
     &__author {
       font-size: 2.2rem;
@@ -41,13 +43,5 @@
     @media(max-width: 1200px) {
       text-align: center;
     }
-  }
-}
-
-.col {
-  width: 33.3%;
-
-  @media(max-width: 1200px) {
-    width: 100%;
   }
 }
