@@ -2,36 +2,19 @@
 
 <div class="container">
   <div class="gallery">
-    <div class="col-md-6">
-      <div class="gallery__img">
-        <img src="img/kid1.jpg" alt="Kid 1">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="gallery__img">
-        <img src="img/kid2.jpg" alt="Kid 2">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="gallery__img">
-        <img src="img/kid3.jpg" alt="Kid 3">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="gallery__img">
-        <img src="img/kid4.jpg" alt="Kid 4">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="gallery__img">
-        <img src="img/kid5.jpg" alt="Kid 5">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="gallery__img">
-        <img src="img/kid6.jpg" alt="Kid 6">
-      </div>
-    </div>
+    <% if(images) { %>
+      <% images.forEach((image) => { %>
+        <% if(image.page == 'kids') { %>
+          <div class="col-md-6">
+            <div class="gallery__img">
+              <a href="<%= image.src %>" data-lightbox="portraits"><img src="<%= image.src %>" alt="<%= image.description %>"></a>
+            </div>
+          </div>
+        <% } %>
+      <% }); %>
+    <% } else { %>
+      <h1>Coming soon!</h1>
+    <% } %>
   </div>
 </div>
 

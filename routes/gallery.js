@@ -1,29 +1,55 @@
 const express = require('express');
 const router = express.Router();
+const Image = require('../models/Image');
 
 // Family Page
 router.get('/family', (req, res) => {
-  res.render('family');
+  Image.find({}, (err, images) => {
+    if(err) {
+      return console.log(err);
+    }
+    res.render('family', {images: images});
+  });
 });
 
 // Couples Page
 router.get('/couples', (req, res) => {
-  res.render('couples');
+  Image.find({}, (err, images) => {
+    if(err) {
+      return console.log(err);
+    }
+    res.render('couples', {images: images});
+  });
 });
 
 // Portraits Page
 router.get('/portraits', (req, res) => {
-  res.render('portraits');
+  Image.find({}, (err, images) => {
+    if(err) {
+      return console.log(err);
+    }
+    res.render('portraits', {images: images});
+  });
 });
 
 // Kids Page
 router.get('/kids', (req, res) => {
-  res.render('kids');
+  Image.find({}, (err, images) => {
+    if(err) {
+      return console.log(err);
+    }
+    res.render('kids', {images: images});
+  });
 });
 
 // Babies Page
 router.get('/babies', (req, res) => {
-  res.render('babies');
+  Image.find({}, (err, images) => {
+    if(err) {
+      return console.log(err);
+    }
+    res.render('babies', {images: images});
+  });
 });
 
 module.exports = router;
