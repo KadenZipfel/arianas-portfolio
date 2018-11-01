@@ -5,6 +5,12 @@ const bodyParser = require('body-parser');
 const flash = require('connect-flash');
 const session = require('express-session')
 const keys = require('./keys');
+const mongoose = require('mongoose');
+
+mongoose.connect(keys.db);
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error: '));
 
 const PORT = process.env.PORT || 3000;
 
