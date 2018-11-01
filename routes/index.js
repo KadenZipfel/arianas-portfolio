@@ -3,6 +3,7 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 const keys = require('../keys');
 const flash = require('connect-flash');
+const Image = require('../models/Image');
 
 // Index Page
 router.get('/', (req, res) => {
@@ -85,6 +86,30 @@ router.post('/bookingform', (req, res) => {
 // FAQ Page
 router.get('/faq', (req, res) => {
   res.render('faq');
+});
+
+// Post Page
+router.get('/post', (req, res) => {
+  res.render('post');
+});
+
+// Post Logic
+router.post('/post', (req, res) => {
+  if(req.body.secret == keys.secret) {
+    Image.create({
+      src: req.body.src,
+      description: req.body.description,
+      page: req.body.page
+    }, (err, image) => {
+      if(err) {
+        console.log(err);
+        return res.redirect('back');
+      }
+      image.save();
+      console.log('Image saved: ', image);
+      res.redirect('back');
+    });
+  }
 });
 
 module.exports = router;
