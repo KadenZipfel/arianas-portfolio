@@ -75,7 +75,9 @@ router.post('/bookingform', (req, res) => {
       Phone: ${req.body.phone}, 
       How can I help capture your milestones: ${req.body.milestones}, 
       Session Type: ${req.body.session}, 
-      How did you find out about me: ${req.body.how}`
+      How did you find out about me: ${req.body.how},
+      Promo Code: ${req.body.session}
+      `
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if(error) return console.log(error)
